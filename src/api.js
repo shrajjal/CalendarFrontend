@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'https://calendarbackend-cno3.onrender.com' });
+const API = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'https://calendarbackend-cno3.onrender.com/api' });
 export const fetchEvents = (start, end) => API.get(`/events?start=${start.toISOString()}&end=${end.toISOString()}`).then(r => r.data);
 export const createEvent = (ev) => API.post('/events', ev).then(r => r.data);
 export const updateEvent = (id, ev) => API.put(`/events/${id}`, ev).then(r => r.data);
