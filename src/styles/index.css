@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth theme transition */
+* {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Light + Dark base */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom right, #e8f0fe, #fef6ff);
+}
+
+/* Dark Mode Body */
+.dark body {
+  background: #0f0f0f !important;
+  color: #e5e5e5 !important;
+}
+
+/* Calendar card styling */
+.calendar-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow:
+    0 4px 14px rgba(0,0,0,0.05),
+    0 8px 25px rgba(0,0,0,0.03);
+}
+
+.dark .calendar-card {
+  background: #1c1c1c !important;
+  border-color: #333 !important;
+  box-shadow: none !important;
+}
+
+/* Event pill */
+.event-pill {
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  opacity: 0.95;
+}
+.dark .event-pill {
+  opacity: 0.85;
+}
+.event-pill:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
